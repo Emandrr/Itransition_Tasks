@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Task3_DiceGame
 {
@@ -10,8 +11,8 @@ namespace Task3_DiceGame
     {
         public static int ChoiseOfComputer(int length)
         {
-            Random random = new Random();
-            int computerMove = random.Next(0, length);
+            //Random random = new Random();
+            int computerMove = RandomNumberGenerator.GetInt32(0, length);
             return computerMove;
         }
     }
